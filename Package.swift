@@ -9,12 +9,14 @@ let package = Package(
             targets: ["Proquint"]
         ),
     ],
+	dependencies: [
+	    .package(url: "https://github.com/tgunr/proquint.git", from: "1.0.0")
+    ],
     targets: [
         .target(
             name: "Proquint",
             path: "Sources"
         ),
-    ],
-	swiftLanguageVersions: [5]
+    ]
 )
  
