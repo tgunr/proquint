@@ -140,7 +140,7 @@ func my_atoi(base: Int, s: String) -> UInt32 {
     return ret
 }
 
-func toQuint(i: UInt32) -> String {
+func toQuint(_ i: UInt32) -> String {
     var quint: [Character] = []
     uint2quint(quint: &quint, i: i, sepChar: Int("-".unicodeScalars.first!.value))
     return String(quint)
@@ -148,17 +148,17 @@ func toQuint(i: UInt32) -> String {
 
 func main_convertNumber(base: Int, s: String) {
     let n = my_atoi(base: base, s: s)
-    let quint = toQuint(i: n)
+    let quint = toQuint(n)
     print(quint, terminator: " ")
 }
 
-func fromQuint(s: String) -> UInt32 {
+func fromQuint(_ s: String) -> UInt32 {
     let uint0 = quint2uint(quint: s)
     return uint0
 }
 
 func main_convertQuint(s: String) {
-    let uint0 = fromQuint(s: s)
+    let uint0 = fromQuint(s)
     print("x\(String(uint0, radix: 16)) ", terminator: "")
 }
 
