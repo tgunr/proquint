@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		756AF9472B4FED3A0026C5E6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756AF9462B4FED3A0026C5E6 /* main.swift */; };
+		756AF94E2B50121D0026C5E6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756AF94D2B50121D0026C5E6 /* main.swift */; };
+		756AF9502B5012450026C5E6 /* Proquint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756AF94F2B5012440026C5E6 /* Proquint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,8 @@
 
 /* Begin PBXFileReference section */
 		756AF9432B4FED3A0026C5E6 /* proquint */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = proquint; sourceTree = BUILT_PRODUCTS_DIR; };
-		756AF9462B4FED3A0026C5E6 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		756AF94D2B50121D0026C5E6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		756AF94F2B5012440026C5E6 /* Proquint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Proquint.swift; path = ../Sources/Proquint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,8 @@
 		756AF93A2B4FED3A0026C5E6 = {
 			isa = PBXGroup;
 			children = (
-				756AF9452B4FED3A0026C5E6 /* proquint */,
+				756AF94D2B50121D0026C5E6 /* main.swift */,
+				756AF94F2B5012440026C5E6 /* Proquint.swift */,
 				756AF9442B4FED3A0026C5E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +55,6 @@
 				756AF9432B4FED3A0026C5E6 /* proquint */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		756AF9452B4FED3A0026C5E6 /* proquint */ = {
-			isa = PBXGroup;
-			children = (
-				756AF9462B4FED3A0026C5E6 /* main.swift */,
-			);
-			path = proquint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +115,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756AF9472B4FED3A0026C5E6 /* main.swift in Sources */,
+				756AF94E2B50121D0026C5E6 /* main.swift in Sources */,
+				756AF9502B5012450026C5E6 /* Proquint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

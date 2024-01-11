@@ -178,5 +178,5 @@ func main(argc: Int32, argv: [String]) {
     print("")
 }
 
-main(argc: CommandLine.argc, argv: Array(CommandLine.arguments))
+// main(argc: CommandLine.argc, argv: Array(CommandLine.arguments))
 
