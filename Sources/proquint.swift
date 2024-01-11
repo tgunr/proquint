@@ -23,9 +23,10 @@ let uint2vowel: [Character] = [
     "a", "i", "o", "u"
 ]
 
-func uint2quint(quint: inout [Character], i: UInt32, sepChar: Int) {
+func uint2quint(quint: inout [Character], i: Int, sepChar: Int) {
     var j: UInt32 = 0
-    var k: UInt32 = i
+    var k: UInt32 = UInt32(i)
+    
     func append(_ x: Character) {
         quint.append(x)
     }
@@ -61,7 +62,7 @@ func uint2quint(quint: inout [Character], i: UInt32, sepChar: Int) {
     handleConsonant()
 }
 
-func quint2uint(quint: String) -> UInt32 {
+func quint2uint(quint: String) -> Int {
     var res: UInt32 = 0
     
     for c in quint {
@@ -93,12 +94,12 @@ func quint2uint(quint: String) -> UInt32 {
         }
     }
     
-    return res
+    return Int(res)
 }
 
-func my_atoi(base: Int, s: String) -> UInt32 {
+func my_atoi(base: Int, s: String) -> Int {
     let sOrig = s
-    var ret: UInt32 = 0
+    var ret: Int = 0
     
     for c in s {
         var value = -1
@@ -133,14 +134,14 @@ func my_atoi(base: Int, s: String) -> UInt32 {
             fatalError("Numbers of base \(base) may not contain the digit '\(c)': '\(sOrig)'.")
         }
         
-        ret *= UInt32(base)
-        ret += UInt32(value)
+        ret *= Int(base)
+        ret += Int(value)
     }
     
     return ret
 }
 
-public func toQuint(_ i: UInt32) -> String {
+public func toQuint(_ i: Int) -> String {
     var quint: [Character] = []
     uint2quint(quint: &quint, i: i, sepChar: Int("-".unicodeScalars.first!.value))
     return String(quint)
@@ -152,7 +153,7 @@ public func convertNumber(base: Int, s: String) {
     print(quint, terminator: " ")
 }
 
-public func fromQuint(_ s: String) -> UInt32 {
+public func fromQuint(_ s: String) -> Int {
     let uint0 = quint2uint(quint: s)
     return uint0
 }
