@@ -16,5 +16,5 @@ export QUADS="127.0.0.1 63.84.220.193 63.118.7.35 140.98.193.141 64.255.6.200 12
 
 for Q in $QUADS; do
     printf "%-15s " $Q
-    ./dquad-hex $Q | xargs ./proquint
+    ./dquad-hex $Q | xargs proquint
 done
