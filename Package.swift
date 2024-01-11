@@ -14,6 +14,7 @@ let package = Package(
             name: "Proquint",
             path: "Sources"
         ),
-    ]
+    ],
+	swiftLanguageVersions: [5]
 )
  
