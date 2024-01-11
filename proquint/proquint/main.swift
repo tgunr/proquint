@@ -141,24 +141,24 @@ func my_atoi(base: Int, s: String) -> UInt32 {
 }
 
 func toQuint(i: UInt32) -> String {
-    var quint: [Character] = []
-    uint2quint(quint: &quint, i: i, sepChar: Int("-".unicodeScalars.first!.value))
-    return String(quint)
+	var quint: [Character] = []
+    uint2quint(quint: &quint, i: n, sepChar: Int("-".unicodeScalars.first!.value))
+	return String(quint)				
 }
 
 func main_convertNumber(base: Int, s: String) {
     let n = my_atoi(base: base, s: s)
-    let quint = toQuint(i: n)
+	let quint = toQuint(i: n)
     print(quint, terminator: " ")
 }
 
 func fromQuint(s: String) -> UInt32 {
     let uint0 = quint2uint(quint: s)
-    return uint0
+	return uint0
 }
 
 func main_convertQuint(s: String) {
-    let uint0 = fromQuint(s: s)
+	let uint0 = fromQuint(s: String)
     print("x\(String(uint0, radix: 16)) ", terminator: "")
 }
 
@@ -188,5 +188,5 @@ func main(argc: Int32, argv: [String]) {
     print("")
 }
 
-// main(argc: CommandLine.argc, argv: Array(CommandLine.arguments))
+main(argc: CommandLine.argc, argv: Array(CommandLine.arguments))
 
