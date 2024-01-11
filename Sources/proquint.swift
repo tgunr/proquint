@@ -140,24 +140,24 @@ func my_atoi(base: Int, s: String) -> UInt32 {
     return ret
 }
 
-func toQuint(_ i: UInt32) -> String {
+public func toQuint(_ i: UInt32) -> String {
     var quint: [Character] = []
     uint2quint(quint: &quint, i: i, sepChar: Int("-".unicodeScalars.first!.value))
     return String(quint)
 }
 
-func main_convertNumber(base: Int, s: String) {
+public func convertNumber(base: Int, s: String) {
     let n = my_atoi(base: base, s: s)
     let quint = toQuint(n)
     print(quint, terminator: " ")
 }
 
-func fromQuint(_ s: String) -> UInt32 {
+public func fromQuint(_ s: String) -> UInt32 {
     let uint0 = quint2uint(quint: s)
     return uint0
 }
 
-func main_convertQuint(s: String) {
+public func convertQuint(s: String) {
     let uint0 = fromQuint(s)
     print("x\(String(uint0, radix: 16)) ", terminator: "")
 }
@@ -177,11 +177,11 @@ func main(argc: Int32, argv: [String]) {
         if s.hasPrefix("0") {
             fatalError("Do not lead input strings with a zero.\nFor decimal, trim leading zeros.\nFor hex, lead with an 'x'.\nWe do not process octal.")
         } else if s.hasPrefix("x") || s.hasPrefix("X") {
-            main_convertNumber(base: 16, s: String(s.dropFirst()))
+            convertNumber(base: 16, s: String(s.dropFirst()))
         } else if s.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil {
-            main_convertNumber(base: 10, s: s)
+            convertNumber(base: 10, s: s)
         } else {
-            main_convertQuint(s: s)
+            convertQuint(s: s)
         }
     }
     
