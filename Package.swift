@@ -12,7 +12,7 @@ let package = Package(
     targets: [
         .target(
             name: "Proquint",
-            path: "Sources"
+            path: "Packages"
         ),
     ]
 )
