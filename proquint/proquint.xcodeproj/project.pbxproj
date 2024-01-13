@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752A4A882B52AE4900D99734 /* proquint in CopyFiles */ = {isa = PBXBuildFile; fileRef = 756AF9432B4FED3A0026C5E6 /* proquint */; };
 		756AF94E2B50121D0026C5E6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756AF94D2B50121D0026C5E6 /* main.swift */; };
 		756AF9502B5012450026C5E6 /* Proquint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756AF94F2B5012440026C5E6 /* Proquint.swift */; };
 /* End PBXBuildFile section */
@@ -14,12 +15,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		756AF9412B4FED3A0026C5E6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /usr/local/bin;
 			dstSubfolderSpec = 0;
 			files = (
+				752A4A882B52AE4900D99734 /* proquint in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 

@@ -147,6 +147,12 @@ public func toQuint(_ i: Int) -> String {
     return String(quint)
 }
 
+public func randomQuint() -> String {
+    let random32BitNumber = UInt32.random(in: UInt32.min ... UInt32.max)
+    // Call the toQuint function with the random number
+    return toQuint(Int(random32BitNumber))
+}
+
 public func convertNumber(base: Int, s: String) {
     let n = my_atoi(base: base, s: s)
     let quint = toQuint(n)
